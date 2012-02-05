@@ -1,0 +1,112 @@
+$infra: #FF4746;
+$do: #E8DA5E;
+$re: #92B55F;
+$mi: #487D76;
+$ultra: #4B4452;
+
+// Wasabi
+$musi: #FF4242;
+$dead: #F4FAD2;
+$wasabi: #D4EE5E;
+$polished: #E1EDB9;
+$holding: #F0F2EB;
+
+// Cream
+$green: #CAFF42;
+$clean: #EBF7F8;
+$clblue: #D0E0EB;
+$cmblue: #88ABC2;
+$cblue: #49708A;
+
+@mixin separator($back, $h1, $h2, $h3) {
+    background: $back;
+                
+    h1 {
+	color: $h1;
+    }
+    
+    h2 {
+	color: $h2;
+        border-bottom: 0;
+    }
+    
+    h3 {
+	color: $wasabi;
+    }
+
+}
+
+.deck-container {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size:1.25em;
+    background: $holding;
+
+    .slide {
+	background: $holding;
+
+        @include separator($holding, $musi, $musi, $wasabi);
+
+	pre {
+	    border-color: $ultra;
+	}
+
+	code {
+	    color: $ultra;
+	}
+
+	blockquote {
+	    font-size:2em;
+	    font-style:italic;
+	    padding:1em 2em;
+	    color:#000;
+	    border-left:5px solid #ccc;
+
+	    p {
+		margin:0;
+	    }
+
+	    cite {
+		font-size:.5em;
+		font-style:normal;
+		font-weight:bold;
+		color:#888;
+	    }
+	}
+
+	::-moz-selection{ background: $mi; color:#fff; }
+	::selection { background:$mi; color:#fff; }
+
+	a {
+	    &, &:hover, &:focus, &:active, &:visited {
+		color: $mi;
+		text-decoration:none;
+	    }
+
+	    &:hover, &:focus {
+		text-decoration:underline;
+	    }
+	}
+    }
+
+    .slide.separator1 {
+        @include separator($infra, $ultra, $do, #fff);
+    }
+
+    .slide.separator2 {
+        @include separator($cblue, $green, $cmblue, #fff)
+    }
+    
+    .deck-status {
+	font-size:0.6666em;
+    }
+    
+    &.deck-menu {
+	.slide {
+	    background:#eee;
+	}
+	
+	.deck-current, .no-touch & .slide:hover {
+	    background:#ddf;
+	}
+    }
+}

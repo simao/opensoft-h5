@@ -1,0 +1,66 @@
+.deck-container {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.25em;
+  background: #f0f2eb; }
+  .deck-container .slide {
+    background: #f0f2eb;
+    background: #f0f2eb; }
+    .deck-container .slide h1 {
+      color: #ff4242; }
+    .deck-container .slide h2 {
+      color: #ff4242;
+      border-bottom: 0; }
+    .deck-container .slide h3 {
+      color: #d4ee5e; }
+    .deck-container .slide pre {
+      border-color: #4b4452; }
+    .deck-container .slide code {
+      color: #4b4452; }
+    .deck-container .slide blockquote {
+      font-size: 2em;
+      font-style: italic;
+      padding: 1em 2em;
+      color: #000;
+      border-left: 5px solid #ccc; }
+      .deck-container .slide blockquote p {
+        margin: 0; }
+      .deck-container .slide blockquote cite {
+        font-size: .5em;
+        font-style: normal;
+        font-weight: bold;
+        color: #888; }
+    .deck-container .slide ::-moz-selection {
+      background: #487d76;
+      color: #fff; }
+    .deck-container .slide ::selection {
+      background: #487d76;
+      color: #fff; }
+    .deck-container .slide a, .deck-container .slide a:hover, .deck-container .slide a:focus, .deck-container .slide a:active, .deck-container .slide a:visited {
+      color: #487d76;
+      text-decoration: none; }
+    .deck-container .slide a:hover, .deck-container .slide a:focus {
+      text-decoration: underline; }
+  .deck-container .slide.separator1 {
+    background: #ff4746; }
+    .deck-container .slide.separator1 h1 {
+      color: #4b4452; }
+    .deck-container .slide.separator1 h2 {
+      color: #e8da5e;
+      border-bottom: 0; }
+    .deck-container .slide.separator1 h3 {
+      color: #d4ee5e; }
+  .deck-container .slide.separator2 {
+    background: #49708a; }
+    .deck-container .slide.separator2 h1 {
+      color: #caff42; }
+    .deck-container .slide.separator2 h2 {
+      color: #88abc2;
+      border-bottom: 0; }
+    .deck-container .slide.separator2 h3 {
+      color: #d4ee5e; }
+  .deck-container .deck-status {
+    font-size: 0.6666em; }
+  .deck-container.deck-menu .slide {
+    background: #eee; }
+  .deck-container.deck-menu .deck-current, .no-touch .deck-container.deck-menu .slide:hover {
+    background: #ddf; }

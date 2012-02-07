@@ -138,7 +138,7 @@ semelhantes a aplicações nativas.</h3>
 <section class="slide separator1" id="whats-new">
   <span class="vcenter">
     <img style="width: 300px;" src="img/owl.png">
-    <h1>O que há de novo</h1>
+    <h1>Novos Elementos HTML</h1>
   </span>
 </section>
 
@@ -161,7 +161,7 @@ semelhantes a aplicações nativas.</h3>
 </section>
 
 <section class="slide" id="semantic-2">
-  <h2>Novos Elementos Semanticos</h2>
+  <h2>Novos Elementos Semânticos</h2>
 
   <ul>
     <li>section</li>
@@ -176,10 +176,10 @@ semelhantes a aplicações nativas.</h3>
 </section>
 
 <section class="slide" id="video">
-  <h2>Video Sem Flash</h2>
+  <h2>Vídeo Sem Flash</h2>
   <h3>Permite mostrar um vídeo sem utilizar um plugin (flash/quicktime/etc)</h3>
   
-  <p>É preciso ter cuidado ao selecionar um formato de vídeo, o suporte para o
+  <p>É preciso ter cuidado ao seleccionar um formato de vídeo, o suporte para o
   formato de vídeo depende se o sistema operativo tem o codec instalado.</p>
 
 <p>Depois de detectar se o browser tem vídeo, podemos simplesmente utilizar uma
@@ -187,7 +187,7 @@ tag <code>&lt;video&gt;</code></p>
 
 <pre><code>&lt;video src="file.avi" width="320" height="240"&gt;</video></pre></code>
 
-<p>Também podemos utilizar vários formatos, o browser seleciona o formato que suporta:</p>
+<p>Também podemos utilizar vários formatos, o browser selecciona o formato que suporta:</p>
 
 <pre><code>&lt;video width="320" height="240" controls&gt;
   &lt;source src="pr6.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'&gt;
@@ -197,9 +197,9 @@ tag <code>&lt;video&gt;</code></p>
 </section>
 
 <section class="slide" id="video-2">
-    <h2>Video Sem Flash</h2>
+    <h2>Vídeo Sem Flash</h2>
     
-    <h3>Podemos controlar o video usando JavaScript</h3>
+    <h3>Podemos controlar o vídeo usando JavaScript</h3>
 
     <p>A tag <code>&lt;video&gt;</code> tem métodos <code>play()</code>,
     <code>pause()</code> e uma propriedade <code>currentTime</code> que podem
@@ -216,6 +216,101 @@ tag <code>&lt;video&gt;</code></p>
   };
 &lt;/script&gt;</pre></code>
 
+</section>
+
+<section class="slide" id="forms-1">
+  <h2>Novos Formulários</h3>
+
+  <h3>Melhor UX</h3>
+
+  <p>O html 5 define vários tipos de inputs que os dispositivos podem utilizar
+  de forma a proporcionar uma melhor experiência para o utilizador.</p>
+
+  <p>Por exemplo, se o input for para um e-mail, um telemóvel pode mudar o
+  teclado apresentado para mostrar @ ou mostrar os contactos disponíveis no
+  telefone. Se for para um input para um telefone, o dispositivo pode mostrar um
+  teclado só com números.</p>
+
+  <h3>Validações automáticas</h3>
+  
+  <p>Sabendo o tipo dos campos, o browser pode implementar validações
+  automáticas client-side, sem as implementarmos explicitamente.</p>
+
+  <h3>Podemos usar já!</h3>
+  
+  <p>Todos os browsers modernos suportam estas extensões.</p>
+
+  <p>Caso o browser não suporte os novos tipos de campos, simplesmente mostra um
+  input tradicional.</p>
+</section>
+
+<section class="slide" id="forms-2">
+  <h2>Novos Formulários</h2>
+
+  <pre><code>&lt;input type="email" placeholder="E-mail" required&gt;</code></pre>
+  
+<form>
+  <input type="email" placeholder="E-mail" required >
+  </form>
+
+  <br>
+
+  <pre><code>&lt;input type="range" min="0" max="50" value="10"&gt;</code></pre>
+
+  <input type="range" min="0" max="50" value="10" />
+
+<br><br>
+
+  <pre><code>&lt;input type="search" results="10" placeholder="Search..." &gt;</code></pre>
+
+<input type="search" results="10" placeholder="Search...">
+</section>
+
+
+
+<section class="slide" id="forms-3">
+  <h2>Dispositivos moveis</h2>
+
+  <img src="img/iphone_email.png">
+</section>
+
+<section class="slide" id="forms-3">
+  <h2>Dispositivos moveis</h2>
+
+  <img src="img/iphone_tel.png">
+</section>
+
+<section class="slide" id="forms-4">
+  <h2>Formulários, novos campos</h2>
+
+  <ul>
+    <li>Focus</li>
+    <li>Web Address</li>
+    <li>Number spinbox</li>
+    <li>Sliders</li>
+    <li>...</li>
+  </ul>
+</section>
+
+<section class="slide" id="css3-1">
+  <h2>CSS 3</h2>
+  
+  <p>As novas funcionalidades do CSS3 não fazem parte do standard HTML 5, mas
+  todos os browsers modernos suportam estas novas extensões.</p>
+
+  <h3>Novas funcionalidades</h3>
+  <ul>
+    <li>CSS Selectors</li>
+    <li>Web Fonts</li>
+    <li>Colunas de texto</li>
+    <li>etc etc etc</li>
+  </ul>
+</section>
+
+<section class="slide separator1" id="apis-javascript">
+  <span class="vcenter">
+    <img style="width: 200px; " src="img/js.jpg" />
+  </span>
 </section>
 
 <section class="slide" id="canvas-1">
@@ -349,7 +444,7 @@ disponíveis, o IP do utilizador ou mesmo um dispositivo GPS</p>
     <li>e nunca são transmitidos para o servidor</li>
   </ul>
 
-  <p>A unica API suportada por todos os browsers modernos é a <strong>localStorage</strong> API</p>
+  <p>A única API suportada por todos os browsers modernos é a <strong>localStorage</strong> API</p>
 </section>
 
 <section class="slide" id="localstorage-2">
@@ -420,77 +515,6 @@ em cache são actualizados</p>
   <a target="_new" href="https://github.com/django/django">https://github.com/django/django</a>
 </section>
 
-<section class="slide" id="forms-1">
-  <h2>Novos Formulários</h3>
-
-  <h3>Melhor UX</h3>
-
-  <p>O html 5 define vários tipos de inputs que os dispositivos podem utilizar
-  de forma a proporcionar uma melhor experiência para o utilizador.</p>
-
-  <p>Por exemplo, se o input for para um e-mail, um telemóvel pode mudar o
-  teclado apresentado para mostrar o caracter @ ou mostrar os contactos
-  disponíveis no telefone. Se for para um input para um telefone, o dispositivo
-  pode mostrar um teclado só com números.</p>
-
-  <h3>Validações automáticas</h3>
-  
-  <p>Sabendo o tipo dos campos, o browser pode implementar validações
-  automáticas client-side, sem as implementarmos explicitamente.</p>
-
-  <h3>Podemos usar já!</h3>
-  
-  <p>Todos os browsers modernos suportam estas extensões.</p>
-
-  <p>Caso o browser não suporte os novos tipos de campos, simplesmente mostra um
-  input tradicional.</p>
-</section>
-
-<section class="slide" id="forms-2">
-  <h2>Novos Formulários</h2>
-
-  <pre><code>&lt;input type="email" placeholder="E-mail" required&gt;</code></pre>
-  
-<form>
-  <input type="email" placeholder="E-mail" required >
-  </form>
-
-  <br>
-
-  <pre><code>&lt;input type="range" min="0" max="50" value="10"&gt;</code></pre>
-
-  <input type="range" min="0" max="50" value="10" />
-
-<br><br>
-
-  <pre><code>&lt;input type="search" results="10" placeholder="Search..." &gt;</code></pre>
-
-<input type="search" results="10" placeholder="Search...">
-</section>
-
-
-<section class="slide" id="forms-3">
-  <h2>Dispositivos moveis</h2>
-
-  <img src="img/iphone_email.png">
-</section>
-
-<section class="slide" id="forms-3">
-  <h2>Dispositivos moveis</h2>
-
-  <img src="img/iphone_tel.png">
-</section>
-
-<section class="slide" id="forms-4">
-  <h2>Formulários, novos campos</h2>
-
-  <ul>
-    <li>Focus</li>
-    <li>Web Address</li>
-    <li>Number spinbox</li>
-    <li>Sliders</li>
-    <li>...</li>
-  </ul>
 </section>
 
 
@@ -549,7 +573,7 @@ em cache são actualizados</p>
   var g = event.gamma;
 }, false);</code></pre>
 
-<img style="height: 200px;" src="img/html5_badge.png" id="imgLogo">
+<img style='height: 200px;' src="img/html5_badge.png" />
 </section>
 
 
@@ -588,27 +612,24 @@ em cache são actualizados</p>
         	"Olá!", "Olá Opensoft").show();</code></pre>
   
   <input type="button" value="Mostrar Notificação" id="show-notif-btn">
-
 </section>
 
 
-<section class="slide" id="css3-1">
-  <h2>CSS 3</h2>
-  
-  <p>As novas funcionalidades do CSS3 não fazem parte do standard HTML 5, mas
-  todos os browsers modernos suportam estas novas extensões.</p>
+<section class="slide separator2" id="questions">
+  <span class="vcenter">
+    <h1>Perguntas?</h1>
+  </span>
+</section>
 
-  <h3>Novas funcionalidades</h3>
+<section class="slide separator2" id="resources">
+  <h2>Recursos</h2>
+
   <ul>
-    <li>CSS Selectors</li>
-    <li>Web Fonts</li>
-    <li>Colunas de texto</li>
-    <li>etc etc etc</li>
+    <li>HTML 5 Rocks <a href="http://www.html5rocks.com/">http://www.html5rocks.com</a></li>
+    <li>Slides da apresentação: <a href="http://simaomata.com/h5">http://simaomata.com/h5</a></li>
+    <li>Livro On-line: Dive Into HTML 5 - <a href="http://diveintohtml5.info">http://diveintohtml5.info</a></li>
   </ul>
 </section>
-
-
-
 
 
 <!-- deck.status snippet -->

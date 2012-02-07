@@ -15,7 +15,7 @@ $holding: #F0F2EB;
 $green: #CAFF42;
 $clean: #EBF7F8;
 $clblue: #D0E0EB;
-$cmblue: #88ABC2p;
+$cmblue: #88ABC2;
 $cblue: #49708A;
 
 @import url(http://fonts.googleapis.com/css?family=Coda+Caption:800);
@@ -130,8 +130,16 @@ $chivof: 'Chivo', sans-serif;
     }
 
     .slide.separator2 {
-        @include separator($cblue, $green, $cmblue, #fff)
+        @include separator($cblue, $green, $green, $clblue);
+        color: $clblue;
+
+	a {
+	    &, &:hover, &:focus, &:active, &:visited {
+                color: $green;
+            }
+        }
     }
+
     
     .deck-status {
 	font-size:0.6666em;

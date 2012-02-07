@@ -69,14 +69,17 @@
       font-family: "Open Sans", sans-serif;
       font-size: 40px; }
   .deck-container .slide.separator2 {
-    background: #49708a; }
+    background: #49708a;
+    color: #d0e0eb; }
     .deck-container .slide.separator2 h1 {
       color: #caff42; }
     .deck-container .slide.separator2 h2 {
-      color: #88abc2 p;
+      color: #caff42;
       border-bottom: 0; }
     .deck-container .slide.separator2 h3 {
-      color: white; }
+      color: #d0e0eb; }
+    .deck-container .slide.separator2 a, .deck-container .slide.separator2 a:hover, .deck-container .slide.separator2 a:focus, .deck-container .slide.separator2 a:active, .deck-container .slide.separator2 a:visited {
+      color: #caff42; }
   .deck-container .deck-status {
     font-size: 0.6666em; }
   .deck-container.deck-menu .slide {

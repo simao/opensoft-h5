@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
-	<title>Getting Started with deck.js</title>
+	<title>HTML 5</title>
 	
 	<meta name="description" content="A jQuery library for modern HTML presentations">
 	<meta name="author" content="">
@@ -25,8 +25,7 @@
 	<link rel="stylesheet" href="css/os.css">
 	
 	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
-	<link rel="stylesheet" href="vendors/deck.js/themes/transition/horizontal-slide.css">
-	
+<!--	<link rel="stylesheet" href="vendors/deck.js/themes/transition/horizontal-slide.css"> -->
 	<script src="vendors/modernizr.custom.js"></script>
 </head>
 
@@ -35,141 +34,582 @@
 <!-- Begin slides -->
 <section class="slide separator1" id="title-slide">
   <span class="vcenter">
-      <img style="width: 400px;" src="img/html5_badge_bw.png" alt="HTML5">
+    <img style="width: 400px;" src="img/html5_badge_bw.png" alt="HTML5">
+
+      <h3>&bdquo;Next Generation Features for Modern Web Development&ldquo;</h3>
+
+      <br>
         
         <h5>Simão Mata</h5>
         <h5>Opensoft, 10 Fev 2012</h5>
+      </span>
+</section>
+
+<section class="slide" id="whats-1">
+  <h1>O que é HTML 5 ?</h1>
+</section>
+
+<section class="slide" id="whats-2">
+<span class="vcenter">
+    <img style="height: 300px;" src="img/html5_badge.png" alt="HTML5">
+
+  <h3 class="ultra">É um conjunto de tecnologias e capacidades que estão disponíveis em browsers
+modernos e que nos permitem desenvolver aplicações web com capacidadades
+semelhantes a aplicações nativas.</h3>
+<br>
+  <h3 class="ultra">Não é uma linguagem nova que vem substituir HTML/XHTML</h3>
 </span>
 </section>
 
-<section class="slide" id="how-to-overview">
-	<h2>How to Make a Deck</h2>
-	<ol>
-		<li>
-			<h3>Write Slides</h3>
-			<p>Slide content is simple&nbsp;HTML.</p>
-		</li>
-		<li>
-			<h3>Choose Themes</h3>
-			<p>One for slide styles and one for deck&nbsp;transitions.</p>
-		</li>
-		<li>
-			<h3>Include Extensions</h3>
-			<p>Add extra functionality to your deck, or leave it stripped&nbsp;down.</p>
-		</li>
-	</ol>
+<section class="slide" id="whats-3">
+<span class="vcenter">
+  <h1 class="font-sans-1">HTML 5 é...</h1>
+  <h2 style="font-size: 70px;" class="ultra" >HTML5 ~= HTML + CSS + JS</h2>
+</span>
 </section>
 
-<section class="slide" id="markup">
-	<h2>The Markup</h2>
-	<p>Slides are just HTML elements with a class of <code>slide</code>.</p>
-	<pre><code>&lt;section class=&quot;slide&quot;&gt;
-   &lt;h2&gt;How to Make a Deck&lt;/h2&gt;
-   &lt;ol&gt;
-      &lt;li&gt;
-         &lt;h3&gt;Write Slides&lt;/h3&gt;
-         &lt;p&gt;Slide content is simple HTML.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-         &lt;h3&gt;Choose Themes&lt;/h3&gt;
-         &lt;p&gt;One for slide styles and one for deck transitions.&lt;/p&gt;
-      &lt;/li&gt;
-      &hellip;
-   &lt;/ol&gt;
-&lt;/section&gt;</code></pre>
+<section class="slide" id="quando-1">
+  <h1 class="font-sans-1">Quando podemos começar a usar?</h1>
 </section>
 
-<section class="slide" id="themes">
-	<h2>Style Themes</h2>
-	<p>Customizes the colors, typography, and layout of slide&nbsp;content.</p>
-	<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/css/style-theme.css&quot;&gt;</code></pre>
-	<h2>Transition Themes</h2>
-	<p>Defines transitions between slides using CSS3 transitions.  Less capable browsers fall back to cutaways. But <strong>you</strong> aren&rsquo;t using <em>those</em> browsers to give your presentations, are&nbsp;you&hellip;</p>
-	<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/css/transition-theme.css&quot;&gt;</code></pre>
+<section class="slide" id="quando-2">
+<span class="vcenter">
+  <h1 class="musi font-sans-1">Quando podemos começar a usar?</h1>
+  <h1 class="ultra">AGORA!</h1>
+</span>
 </section>
 
-<section class="slide" id="extensions">
-	<h2>Extensions</h2>
-	<p>Core gives you basic slide functionality with left and right arrow navigation, but you may want more. Here are the ones included in this&nbsp;deck:</p>
-	
-	<ul>
-		<li class="slide" id="extensions-goto">
-			<strong>deck.goto</strong>: Adds a shortcut key to jump to any slide number.  Hit g, type in the slide number, and hit&nbsp;enter.
-		</li>
-		
-		<li class="slide" id="extensions-hash">
-			<strong>deck.hash</strong>: Enables internal linking within slides, deep linking to individual slides, and updates the address bar &amp; a permalink anchor with each slide&nbsp;change.
-		</li>
+<section class="slide" id="como-1">
+<span class="vcenter">
 
-		<li class="slide" id="extensions-menu">
-			<strong>deck.menu</strong>: Adds a menu view, letting you see all slides in a grid. Hit m to toggle to menu view, continue navigating your deck, and hit m to return to normal view. Touch devices can double-tap the deck to switch between&nbsp;views.
-		</li>
+  <h2 style="text-align: left">Já podemos utilizar HTML 5!</h2>
 
-		<li class="slide" id="extensions-navigation">
-			<strong>deck.navigation</strong>: Adds clickable left and right buttons for the less keyboard&nbsp;inclined.
-		</li>
+  <h3 style="font-size: 40px; text-align: left">Todos os browsers modernos
+  implementam as funcionalidades mais comuns definidas pelo HTML 5.</h3>
 
-		<li class="slide" id="extensions-status">
-			<strong>deck.status</strong>: Adds a page number indicator. (current/total)
-		</li>
-	</ul>
-	
-	<p class="slide" id="extension-folders">Each extension folder in the download package contains the necessary JavaScript, CSS, and HTML&nbsp;files. For a complete list of extension modules included in deck.js, check out the&nbsp;<a href="http://imakewebthings.github.com/deck.js/docs">documentation</a>.</p>
+  <h3  style="font-size: 40px; text-align: left">Podemos
+  começar a utilizar estas capacidades a partir de hoje</h3>
+
+  <h3 style="font-size: 40px; text-align: left">Podemos suportar várias
+  plataformas utilizando as mesmas APIs JavaScript</h3>
+</span>
 </section>
 
-<section class="slide" id="nested">
-	<h2>Nested Slides</h2>
-	<p>That last slide had a few steps.  To create substeps in slides, just nest them:</p>
-	<pre><code>&lt;section class=&quot;slide&quot;&gt;
-  &lt;h2&gt;Extensions&lt;/h2&gt;
-  &lt;p&gt;Core gives you basic slide functionality...&lt;/p&gt;		
-  &lt;ul&gt;
-     &lt;li class=&quot;slide&quot;&gt;
-        &lt;h3&gt;deck.goto&lt;/h3&gt;
-        &lt;p&gt;Adds a shortcut key to jump to any slide number...&lt;/p&gt;
-     &lt;/li&gt;
-     &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;	
-     &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;
-     &lt;li class=&quot;slide&quot;&gt;...&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/section&gt;</code></pre>
+<section class="slide" id="como-2">
+  <h1>Mas Como?</h1>
 </section>
 
-<section class="slide" id="elements-images">
-	<h2>Other Elements: Images</h2>
-	<img src="http://placekitten.com/600/375" alt="Kitties">
-	<pre><code>&lt;img src=&quot;http://placekitten.com/600/375&quot; alt=&quot;Kitties&quot;&gt;</code></pre>
+<section class="slide" id="como-3">
+  <h2>Como?</h2>
+  <h3>HTML 5 é um conjunto de tecnologias, não podemos detectar suporta para
+  HTML</h3>
+  
+  <h3>Temos de detectar se o browser suporta cada uma das features que nós
+  queremos usar</h3>
 </section>
 
-<section class="slide" id="elements-blockquotes">
-	<h2>Other Elements: Blockquotes</h2>
-	<blockquote cite="http://example.org">
-		<p>Food is an important part of a balanced diet.</p>
-		<p><cite>Fran Lebowitz</cite></p>
-	</blockquote>
-	<pre><code>&lt;blockquote cite=&quot;http://example.org&quot;&gt;
-  &lt;p&gt;Food is an important part of a balanced diet.&lt;/p&gt;
-  &lt;p&gt;&lt;cite&gt;Fran Lebowitz&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</code></pre>
+<section class="slide" id="como-4">
+  <h2>Como?</h2>
+  <p><img style="width: 500px ;" src="img/modernizr.png" alt="HTML5"></p>
+
+  <p>Utilizando a <strong>Modernizr</strong> podemos detectar todas as features que precisarmos utilizando Javascript</p>
+
+  <p>Caso o browser não suporte tudo o que precisamos para mostrar
+  correctamente a página, podemos avisar o utilizador ou utilizar outra
+  tecnologia que esteja disponível</p>
+
+  <pre><code>
+    if (Modernizr.localstorage) {
+    	// Utilizar o localStorage!
+    } else {
+    	// Browser não suporta localStorage
+        // Utilizar outra forma
+    }</code></pre>
+</section>
+
+<section class="slide" id="como-5">
+  <h2>Como?</h2>
+
+  <p>Um doctype mais simples:</p>
+
+  <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+</section>
+
+<section class="slide separator1" id="whats-new">
+  <span class="vcenter">
+    <img style="width: 300px;" src="img/owl.png">
+    <h1>O que há de novo</h1>
+  </span>
+</section>
+
+<section class="slide" id="semantic-1">
+  <h2>Estrutura Semântica</h2>
+
+  <h3>Oferecem uma forma de estruturar o conteúdo de páginas web</h3>
+
+  <p>As tags HTML utilizada normalmente não dizem nada sobre o conteúdo de uma
+  página web</p>
+
+  <p>Com informação semântica sobre o conteúdo, os dispositivos podem optimizar
+  a visualização de páginas</p>
+
+  <p>É impossível construir programas automáticos de extracção de informação sem
+  informação semântica</p>
+
+  <p>No limite, as máquinas deveriam ser capazes de navegar na web tal como os
+  humanos</p>
+</section>
+
+<section class="slide" id="semantic-2">
+  <h2>Novos Elementos Semanticos</h2>
+
+  <ul>
+    <li>section</li>
+    <li>nav</li>
+    <li>article</li>
+    <li>aside</li>
+    <li>hgroup</li>
+    <li>header</li>
+    <li>footer</li>
+    <li>time</li>
+  </ul>
+</section>
+
+<section class="slide" id="video">
+  <h2>Video Sem Flash</h2>
+  <h3>Permite mostrar um vídeo sem utilizar um plugin (flash/quicktime/etc)</h3>
+  
+  <p>É preciso ter cuidado ao selecionar um formato de vídeo, o suporte para o
+  formato de vídeo depende se o sistema operativo tem o codec instalado.</p>
+
+<p>Depois de detectar se o browser tem vídeo, podemos simplesmente utilizar uma
+tag <code>&lt;video&gt;</code></p>
+
+<pre><code>&lt;video src="file.avi" width="320" height="240"&gt;</video></pre></code>
+
+<p>Também podemos utilizar vários formatos, o browser seleciona o formato que suporta:</p>
+
+<pre><code>&lt;video width="320" height="240" controls&gt;
+  &lt;source src="pr6.mp4"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'&gt;
+  &lt;source src="pr6.webm" type='video/webm; codecs="vp8, vorbis"'&gt;
+  &lt;source src="pr6.ogv"  type='video/ogg; codecs="theora, vorbis"'&gt;
+&lt;/video&gt;</pre></code>
+</section>
+
+<section class="slide" id="video-2">
+    <h2>Video Sem Flash</h2>
+    
+    <h3>Podemos controlar o video usando JavaScript</h3>
+
+    <p>A tag <code>&lt;video&gt;</code> tem métodos <code>play()</code>,
+    <code>pause()</code> e uma propriedade <code>currentTime</code> que podem
+    ser utilizados para controlar o playback do vídeo.
+
+    <pre><code>&lt;script type="text/javascript"&gt;
+  var v = document.getElementById("movie");
+  v.onclick = function() {
+    if (v.paused) {
+      v.play();
+    } else {
+      v.pause();
+    }
+  };
+&lt;/script&gt;</pre></code>
+
+</section>
+
+<section class="slide" id="canvas-1">
+  <h2>Canvas</h2>
+  
+  <h3>Permite desenhar qualquer tipo de gráficos numa aplicação web</h3>
+
+  <p>Deixamos de precisar de flash para renderizar gráficos</p>
+
+  <p>Permite utilizar <strong>WebGL</strong> para renderizar gráficos 3D
+  directamente a partir de <strong>JavaScript</strong>. Os gráficos renderizados
+  podem utilizar o GPU da placa gráfica instalada no computador do
+  utilizador</p>
+
+  <p>Um <code>&lt;canvas&gt;</code> é um rectângulo na página onde
+  podemos utilizar JavaScript para desenharmos o que quisermos</p>
+</section>
+
+<section class="slide" id="canvas-2">
+  <h2>Exemplo Canvas</h2>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+  var canvasContext = document.getElementById("canvas").getContext("2d");
+  canvasContext.fillRect(250, 25, 150, 100);
+  canvasContext.beginPath();
+  canvasContext.arc(450, 110, 100, Math.PI * 1/2, Math.PI * 3/2);
+  canvasContext.lineCap = 'round';
+  canvasContext.strokeStyle = 'rgba(255, 127, 0, 0.5)';
+  canvasContext.stroke();
+&lt;/script&gt;
+</code></pre>
+
+<input type="button" value="Desenhar!" id="draw-btn">
+<canvas id="canvas" width="838" height="220"></canvas>
+
+</section>
+
+<section class="slide" id="location-1">
+  <h2>API de Localização</h2>
+ 
+  <h3>Permite detectar a localização geográfica do utilizador</h3>
+
+  <img width="150px" src="img/globe_man.png" />
+
+  <p>Existem APIs JavaScript para obter a localização do utilizador, depois do
+browser pedir autorização ao utilizador para fornecer os dados</p>
+
+<p>Em JavaScript também temos acesso à precisão da localização que foi obtida</p>
+
+<p>A localização pode ser calculada pelo browser com base nas redes wi-fi
+disponíveis, o IP do utilizador ou mesmo um dispositivo GPS</p>
+</section>
+
+<section class="slide" id="location-2">
+  <h2>Exemplo Localização</h2>
+          <button id="see-position">Mostrar Localização</button> <span id="geo-log"></span>
+
+          <br>
+            <br>
+              <div id="geo-map" class="gmap example">
+            <img src="http://maps.google.com/maps/api/staticmap?center=37.4419,-94.1419&zoom=3&size=680x278&sensor=true"/>
+          </div>
+</section>
+
+<section class="slide" id="websockets-1">
+  <h2>WebSockets</h2>
+
+  <h3>Permitem manter uma conexão TCP normal com o servidor</h3>
+
+  <p>Não são enviados headers HTTP, é um protocolo simples</p>
+
+  <p>Utilizamos <code>onopen, onmessage, send, etc</code> para ter acesso à
+  conexão.</p>
+
+  <p>Permite aplicações que mantêm uma conexão <strong>permanente</strong> com o
+  servidor.</p>
+
+  <p>Não precisamos de utilizar <strong>long-polling</strong> para
+  desenvolvermos aplicações <strong>real-time</strong></p>
+
+  <h3>Exemplos</h3>
+  <p>Podemos ter aplicações web que avisam o utilizador quando o documento que
+  ele está a editar foi alterado!</p>
+  
+  <p>O cliente spreadd poderia manter uma ligação ao servidor e actualizar a
+  interface assim que uma nova mensagem fosse recebida nessa conexão, sem ser
+  necessário fazer polling ao servidor periodicamente.</p>
+</section>
+
+<section class="slide" id="websockets-2">
+  <h2>WebSockets - Exemplo</h2>
+  <pre><code>        var socket = new WebSocket('ws://echo.websocket.org?encoding=text');
+        socket.onopen = function(event) {
+        	socket.send('Hello, Opensoft!');
+        };
+
+        socket.onmessage = function(event) { 
+            logBox.value += 'Received echo: ' + event.data + '\n';
+        }
+        
+        socket.onclose = function(event) { 
+            logBox.value += 'Closed Connection\n';
+        }        
+    }</code></pre>
+
+  <textarea id="ws-logbox" cols="40" rows="5">
+  </textarea>
+  
+  <input id="ws-start-btn" type="button" value="Start WebSocket!">
 </section>
 
 
-<section class="slide" id="elements-videos">
-	<h2>Other Elements: Video Embeds</h2>
-	<p>Embed videos from your favorite online video service or with an HTML5 video&nbsp;element.</p>
-	
-	<iframe src="http://player.vimeo.com/video/1063136?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0"></iframe>
-	
-	<pre><code>&lt;iframe src=&quot;http://player.vimeo.com/video/1063136?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;400&quot; height=&quot;225&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code></pre>
+<section class="slide" id="localstorage-1">
+  <h2>Guardar dados offline</h2>
+
+  <h3>Esta é uma das grandes vantagens de aplicações nativas</h3>
+
+  <p>É comum precisarmos de guardar ficheiros de configuração, dados privados,
+  etc no lado do cliente.</p>
+  
+  <p>A única forma de manter dados de uma sessão para outra era guardar os dados
+  no servidor e utilizar cookies</p>
+
+  <p>O html 5 define algumas APIs de forma a que as aplicações web possam ter esta c</p>
+
+  <p>Com estas APIs podemos:</p>
+
+  <ul>
+    <li>Guardar dados do lado do cliente...</li>
+    <li>...que são persistentes para além de um refresh da aplicação...</li>
+    <li>e nunca são transmitidos para o servidor</li>
+  </ul>
+
+  <p>A unica API suportada por todos os browsers modernos é a <strong>localStorage</strong> API</p>
 </section>
 
-<section class="slide separator2" id="digging-deeper">
-  <h1>Thanks!</h1>
-	<h2>Digging Deeper</h2>
-	<p>If you want to learn about making your own themes, extending
-	deck.js, and more, check out the&nbsp;<a
-	href="vendors/deck.js/docs/">documentation</a>.</p>
+<section class="slide" id="localstorage-2">
+  <h2>Exemplo LocalStorage</h2>
+
+  <pre><code>function saveGameState() {
+      localStorage["game.in.progress"] = gGameInProgress;
+      localStorage["game.selectedpiece"] = gSelectedPieceIndex;
+      localStorage["game.selectedpiecehasmoved"] = true;
+      localStorage["game.movecount"] = gMoveCount;
+      return true;
+}</code></pre>
 </section>
+
+<section class="slide" id="caching-1">
+  <h2>Guardar dados Offline - Caching</h2>
+
+  <h3>Suporte para caching explicito</h3>
+
+  <p>As aplicações passam a poder definir um ficheiro <code>manifest</code>
+  onde são definidos os ficheiros que o browser deve guardar para que a
+  aplicação funcione correctamente offline</p>
+
+  <pre><code>&lt;html manifest="/cache.manifest"&gt;</code></pre>
+
+  <pre><code>CACHE MANIFEST
+/clock.css
+/clock.js
+/clock-face.jpg</code></pre>
+
+<p>Quando o browser detecta modificações neste ficheiro, os conteúdos guardados
+em cache são actualizados</p>
+</section>
+
+<section class="slide" id="caching-1">
+  <h2>Aplicações Offline</h2>
+
+  <h3>cache + localStorage = aplicações offline</h3>
+
+  <p>Utilizando estas tecnologias, as aplicações web podem trabalhar
+  <strong>offline</strong> como se fossem aplicações nativas!</p>
+
+  <p>O utilizador pode utilizar a aplicação offline e sincronizar o estado da
+  aplicação quando estiver online novamente, caso seja um requisito da
+  aplicação.</p>
+</section>
+
+<section class="slide" id="history-1">
+  <h2>Manipulação da História</h2>
+  
+  <h3>Alterar a história do browser</h3>
+
+  <p>Podemos alterar o URL da janela sem que isso provoque um refresh total da
+  página</p>
+
+  <p>Podemos ainda adicionar entradas à <code>history</code> do browser</p>
+
+  <p>Esta API permite-nos ter uma aplicação web que se porta como uma aplicação
+  nativa. À medida que o utilizar navega na aplicação, toda a interface pode
+  mudar sem que todos os elementos da página sejam renderizados novamente.</p>
+
+  <p>O url vai mudando, se o utilizador fizer refresh ou desligar o browser,
+  mais tarde pode voltar ao URL e a aplicação pode estar tal como o utilizar a
+  deixou.</p>
+
+  <h3>Exemplo</h3>
+  
+  <a target="_new" href="https://github.com/django/django">https://github.com/django/django</a>
+</section>
+
+<section class="slide" id="forms-1">
+  <h2>Novos Formulários</h3>
+
+  <h3>Melhor UX</h3>
+
+  <p>O html 5 define vários tipos de inputs que os dispositivos podem utilizar
+  de forma a proporcionar uma melhor experiência para o utilizador.</p>
+
+  <p>Por exemplo, se o input for para um e-mail, um telemóvel pode mudar o
+  teclado apresentado para mostrar o caracter @ ou mostrar os contactos
+  disponíveis no telefone. Se for para um input para um telefone, o dispositivo
+  pode mostrar um teclado só com números.</p>
+
+  <h3>Validações automáticas</h3>
+  
+  <p>Sabendo o tipo dos campos, o browser pode implementar validações
+  automáticas client-side, sem as implementarmos explicitamente.</p>
+
+  <h3>Podemos usar já!</h3>
+  
+  <p>Todos os browsers modernos suportam estas extensões.</p>
+
+  <p>Caso o browser não suporte os novos tipos de campos, simplesmente mostra um
+  input tradicional.</p>
+</section>
+
+<section class="slide" id="forms-2">
+  <h2>Novos Formulários</h2>
+
+  <pre><code>&lt;input type="email" placeholder="E-mail" required&gt;</code></pre>
+  
+<form>
+  <input type="email" placeholder="E-mail" required >
+  </form>
+
+  <br>
+
+  <pre><code>&lt;input type="range" min="0" max="50" value="10"&gt;</code></pre>
+
+  <input type="range" min="0" max="50" value="10" />
+
+<br><br>
+
+  <pre><code>&lt;input type="search" results="10" placeholder="Search..." &gt;</code></pre>
+
+<input type="search" results="10" placeholder="Search...">
+</section>
+
+
+<section class="slide" id="forms-3">
+  <h2>Dispositivos moveis</h2>
+
+  <img src="img/iphone_email.png">
+</section>
+
+<section class="slide" id="forms-3">
+  <h2>Dispositivos moveis</h2>
+
+  <img src="img/iphone_tel.png">
+</section>
+
+<section class="slide" id="forms-4">
+  <h2>Formulários, novos campos</h2>
+
+  <ul>
+    <li>Focus</li>
+    <li>Web Address</li>
+    <li>Number spinbox</li>
+    <li>Sliders</li>
+    <li>...</li>
+  </ul>
+</section>
+
+
+<section class="slide separator1" id="goingnative">
+<span class="vcenter">
+  <h3 style="font-size: 100px;">Funcionalidades nativas</h3>
+</span>
+</section>
+
+
+<style type="text/css" media="screen">
+#drag-zone, #drop-zone {
+  width: 20%;
+}
+#drop-zone {
+  padding: 40px;
+  border: 5px solid #888;
+  height: 100px;
+  width: 400px;
+  overflow: none;
+}
+#drop-zone.hovering {
+  border: 5px solid #aaa;
+  background-color: rgba(255, 0, 0, 0.199219);
+}
+</style>
+
+<section class="slide" id="drag-drop">
+  <h2>Native Drag & Drop</h2>
+
+<p>Funciona para elementos do DOM ou mesmo para ficheiros guardados no computador</p>
+
+
+<pre><code>document.addEventListener('dragstart', function(event) {
+	event.dataTransfer.setData('text', 'Customized text');
+        event.dataTransfer.effectAllowed = 'copy';
+}, false); </code></pre>
+
+<div id="drag-zone">
+  <img src="img/logo_os.png" draggable class="copy" /></li>
+</div>
+  <div id="drop-zone">Drop Area</div>
+</section>
+
+
+<section class="slide" id="device-1">
+  <h2>Orientação do dispositivo</h2>
+
+  <h3>API que permite aceder aos dados do acelerómetro de um dispositivo</h3>
+
+  <p>Muito útil para jogos e aplicações interactivas em dispositivos móveis</p>
+
+  <pre><code>window.addEventListener('deviceorientation', function(event) {
+  var a = event.alpha;
+  var b = event.beta;
+  var g = event.gamma;
+}, false);</code></pre>
+
+<img style="height: 200px;" src="img/html5_badge.png" id="imgLogo">
+</section>
+
+
+<section class="slide" id="markup-apps">
+  <h2>Markup para aplicações</h2>
+  <h3>Componentes disponíveis normalmente em aplicações nativas</h3>
+
+  <pre><code>&lt;details&gt;&lt;summary&gt;HTML 5&lt;/summary&gt;
+        Mais informação sobre um outro item
+ &lt;/details&gt;</code></pre>
+      <details>
+        <summary>HTML 5</summary>
+        Mais informação sobre um outro item
+      </details>
+
+      <br>
+
+      <pre><code>&lt;meter min="0" max="100" low="40" high="90" optimum="100" value="91"&gt;A+&lt;/meter&gt;</code></pre>
+
+      <meter min="0" max="100" low="40" high="90" optimum="100" value="91">A+</meter>
+
+      <br /> <br />
+      
+      <pre><code>&lt;progress value="75" max="100"&gt;3/4 complete&lt;/progress&gt;</code></pre>
+      
+      <progress value="75" max="100">3/4 complete</progress>
+</section>
+
+
+<section class="slide" id="notify-1">
+  <h2>Desktop Notifications</h2>
+
+  <pre><code>
+        window.webkitNotifications.createNotification(
+        	"img/logo_os_small.png", 
+        	"Olá!", "Olá Opensoft").show();</code></pre>
+  
+  <input type="button" value="Mostrar Notificação" id="show-notif-btn">
+
+</section>
+
+
+<section class="slide" id="css3-1">
+  <h2>CSS 3</h2>
+  
+  <p>As novas funcionalidades do CSS3 não fazem parte do standard HTML 5, mas
+  todos os browsers modernos suportam estas novas extensões.</p>
+
+  <h3>Novas funcionalidades</h3>
+  <ul>
+    <li>CSS Selectors</li>
+    <li>Web Fonts</li>
+    <li>Colunas de texto</li>
+    <li>etc etc etc</li>
+  </ul>
+</section>
+
+
+
+
 
 <!-- deck.status snippet -->
 <p class="deck-status">
@@ -197,6 +637,8 @@
 <script src="vendors/deck.js/extensions/menu/deck.menu.js"></script>
 <script src="vendors/deck.js/extensions/goto/deck.goto.js"></script>
 <script src="vendors/deck.js/extensions/status/deck.status.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script src="js/slide_demos.js"></script>
 
 <!-- Initialize the deck -->
 <script>

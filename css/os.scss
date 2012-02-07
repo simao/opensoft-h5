@@ -15,8 +15,29 @@ $holding: #F0F2EB;
 $green: #CAFF42;
 $clean: #EBF7F8;
 $clblue: #D0E0EB;
-$cmblue: #88ABC2;
+$cmblue: #88ABC2p;
 $cblue: #49708A;
+
+@import url(http://fonts.googleapis.com/css?family=Coda+Caption:800);
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+$openf: 'Open Sans', sans-serif;
+
+@import url(http://fonts.googleapis.com/css?family=Chivo:900);
+$chivof: 'Chivo', sans-serif;
+
+@mixin colormix($class, $hex) {
+    .#{$class} {
+        color: $hex
+    }
+}
+
+@mixin allcolors {
+    @include colormix("wasabi", $wasabi);
+    @include colormix("musi", $musi);
+    @include colormix("ultra", $ultra);
+    @include colormix("re", $re);
+}
 
 @mixin separator($back, $h1, $h2, $h3) {
     background: $back;
@@ -31,7 +52,7 @@ $cblue: #49708A;
     }
     
     h3 {
-	color: $wasabi;
+	color: $h3;
     }
 
 }
@@ -42,10 +63,21 @@ $cblue: #49708A;
     background: $holding;
 
     .slide {
-	background: $holding;
+        @include separator($holding, $musi, $musi, $ultra);
+        @include allcolors;
 
-        @include separator($holding, $musi, $musi, $wasabi);
+        .font-sans-1 {
+            font-family: 'Open Sans';
+        }
+        
+        h1 {
+            font-family: $chivof;
+        }
 
+        h2 {
+            font-family: $chivof;
+        }
+        
 	pre {
 	    border-color: $ultra;
 	}
@@ -89,7 +121,12 @@ $cblue: #49708A;
     }
 
     .slide.separator1 {
-        @include separator($infra, $ultra, $do, #fff);
+        @include separator($infra, $do, $ultra, $do);
+
+        h3 {
+            font-family: $openf;
+            font-size: 40px;
+        }
     }
 
     .slide.separator2 {
@@ -104,9 +141,13 @@ $cblue: #49708A;
 	.slide {
 	    background:#eee;
 	}
-	
 	.deck-current, .no-touch & .slide:hover {
 	    background:#ddf;
 	}
     }
+}
+
+#geo-map {
+  height: 280px;
+  width: 640px;
 }

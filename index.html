@@ -443,7 +443,7 @@ h2 + header { ... }</code></pre>
     <li>Colunas</li>
     <li>Borders</li>
     <li>Gradientes</li>
-    <li>Rounded Corner</li>
+    <li>...</li>
   </ul>
 </section>
 
@@ -517,6 +517,21 @@ browser pedir autorização ao utilizador para fornecer os dados</p>
 <p>A localização pode ser calculada pelo browser com base nas redes wi-fi
 disponíveis, o IP do utilizador ou mesmo um dispositivo GPS</p>
 </section>
+
+<section class="slide" id="location-code">
+  <h2>Código</h2>
+
+    <pre><code>
+      navigator.geolocation.getCurrentPosition(showPosition, handlePositionError);
+      
+      function showPosition(position) = {
+      	geolog.textContent = "Está a menos de " + position.coords.accuracy +
+        	" metros de: (" + position.coords.latitude + ", " +
+                position.coords.longitude + ")";
+      }
+    </code></pre>
+</section>
+
 
 <section class="slide" id="location-2">
   <h2>Exemplo Localização</h2>

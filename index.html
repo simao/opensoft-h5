@@ -34,7 +34,7 @@
 <!-- Begin slides -->
 <section class="slide separator1" id="title-slide">
   <span class="vcenter">
-    <img style="width: 400px;" src="img/html5_badge_bw.png" alt="HTML5">
+    <img style='width: 400px;' src="img/html5_badge_bw.png" alt="HTML5">
 
       <h3>&bdquo;Next Generation Features for Modern Web Development&ldquo;</h3>
 
@@ -51,17 +51,30 @@
 
 <section class="slide" id="whats-2">
 <span class="vcenter">
-    <img style="height: 300px;" src="img/html5_badge.png" alt="HTML5">
+    <img style='height: 300px;' src="img/html5_badge.png" alt="HTML5">
 
-  <h3 class="ultra">É um conjunto de tecnologias e capacidades que estão disponíveis em browsers
-modernos e que nos permitem desenvolver aplicações web com capacidadades
-semelhantes a aplicações nativas.</h3>
-<br>
-  <h3 class="ultra">Não é uma linguagem nova que vem substituir HTML/XHTML</h3>
+  <h3 class="ultra">É um conjunto de tecnologias e capacidades que estão
+  disponíveis em browsers modernos e que nos permitem desenvolver aplicações web
+  com capacidadades semelhantes a aplicações nativas.</h3>
 </span>
 </section>
 
 <section class="slide" id="whats-3">
+<span class="vcenter">
+  <h3 class='big-h' class="ultra">Não é uma linguagem nova que vem substituir HTML/XHTML</h3>
+  <h3 class='musi' style='font-size: 50px'>Se funciona com HTML 4, funciona com HTML 5 </h3>
+  <h3 class='big-h' style='font-size: 70px'>Podemos continuar a utilizar tudo o que já utilizamos</h3>
+</span> 
+</section>
+
+<section class="slide" id="ficar">
+  <span class="vcenter">
+    <h1 class="mi">O HTML 5 chegou para ficar</h1>
+  </span>
+</section>
+
+
+<section class="slide" id="whats-4">
 <span class="vcenter">
   <h1 class="font-sans-1">HTML 5 é...</h1>
   <h2 style="font-size: 70px;" class="ultra" >HTML5 ~= HTML + CSS + JS</h2>
@@ -101,8 +114,8 @@ semelhantes a aplicações nativas.</h3>
 
 <section class="slide" id="como-3">
   <h2>Como?</h2>
-  <h3>HTML 5 é um conjunto de tecnologias, não podemos detectar suporta para
-  HTML</h3>
+  <h3>HTML 5 é um conjunto de tecnologias, não podemos detectar suporte para
+  HTML 5</h3>
   
   <h3>Temos de detectar se o browser suporta cada uma das features que nós
   queremos usar</h3>
@@ -130,10 +143,40 @@ semelhantes a aplicações nativas.</h3>
 <section class="slide" id="como-5">
   <h2>Como?</h2>
 
-  <p>Um doctype mais simples:</p>
+  <h2>Lembram-se dos doctypes??</h2>
+
+  <pre><code>
+      &lt;!DOCTYPE html
+          PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+    </code>
+  </pre>
+</section>
+
+<section class="slide" id="como-6">
+  <h2>Como?</h2>
+  <h3>Um doctype mais simples</h3>
 
   <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
 </section>
+
+<section class="slide" id="charset">
+  <h2>Especificar sempre o charset</h2>
+  
+  <h3>Antes</h3>
+
+  <pre><code>
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+  </code></pre>
+
+  <h3>Agora</h3>
+  
+    <pre><code>
+      &lt;meta charset="utf-8" /&gt;
+    </code></pre>
+</section>
+
+
 
 <section class="slide separator1" id="whats-new">
   <span class="vcenter">
@@ -159,6 +202,15 @@ semelhantes a aplicações nativas.</h3>
   <p>No limite, as máquinas deveriam ser capazes de navegar na web tal como os
   humanos</p>
 </section>
+
+<section class="slide" id="accessibility">
+  <span class="vcenter">
+    <h1>Acessibilidade</h1>
+    <h2 class="ultra">Em alguns casos, é impossível inferir estrutura sem
+    informação semântica</h2>
+  </span>
+</section>
+
 
 <section class="slide" id="semantic-2">
   <h2>Novos Elementos Semânticos</h2>
@@ -293,25 +345,115 @@ tag <code>&lt;video&gt;</code></p>
 </section>
 
 <section class="slide" id="css3-1">
-  <h2>CSS 3</h2>
+  <span class="vcenter">
+  <h1>CSS 3</h1>
   
-  <p>As novas funcionalidades do CSS3 não fazem parte do standard HTML 5, mas
-  todos os browsers modernos suportam estas novas extensões.</p>
+  <h3>As novas funcionalidades do CSS3 não fazem parte do standard HTML 5, mas
+  todos os browsers modernos suportam estas novas extensões.</h3>
+</span>
+</section>
 
-  <h3>Novas funcionalidades</h3>
+<section class="slide" id="css-2">
+<h2>Selectors</h2>
+    <pre><code>.row:nth-child(even) {
+  background: #dde;
+}
+.row:nth-child(odd) {
+  background: white;
+}</code></pre>
+  <pre><code>input[type='text'] {
+  background: #eee;
+}</code></pre>
+
+  <pre><code>h2:first-child { ... }
+
+div.text > div { ... } 
+
+h2 + header { ... }</code></pre>
+</section>
+
+
+<section class="slide" id="css-3">
+  <h1 class='re' style="font-size: 200px; font-family: 'Alfa Slab One'">Web Fonts</h1>
+</section>
+
+<section class="slide" id="css-4">
+  <h2>Exemplo</h2>
+
+  <h3>Podemos ter as fontes no nosso servidor ou utilizar serviços remotos</h3>
+  
+  <h4><a href="http://www.google.com/webfonts">http://www.google.com/webfonts</a></h4>
+  
+  <h4><a href="https://typekit.com/">https://typekit.com/</a></h4>
+
+  <pre><code>
+    @import url(http://fonts.googleapis.com/css?family=Alfa+Slab+One);
+
+    h2 {
+    	font-family: 'Alfa Slab One', cursive;
+    }
+
+    @font-face {
+	 font-family: 'Droid Sans';
+         src: url(Droid_Sans.ttf);
+    }
+
+  </code></pre>
+</section>
+
+<section class="slide" id="css-shadows">
+  
+<h1 class="rainbow" style='color: black'>shadows</h1>
+
+</section>
+
+
+<section class="slide" id="css-transforms">
+
+<h2>CSS Transforms</h2>
+ 
+<br><br><br><br>
+
+<div class="css-transformed">
+  <pre><code>
+    -webkit-transform: rotateY(45deg);
+    -webkit-transform: scaleX(25deg);
+    -webkit-transform: translate3d(0, 0, 90deg);
+    -webkit-transform: perspective(500px)
+  </code></pre>
+</div>
+
+</section>
+
+<section class="slide" id="css-corners">
+
+<h2>Cantos Arredondados</h2>
+
+  <pre style="border-radius: 50px"><code>
+      border-radius: 50xx;
+  </code></pre>
+</section>
+
+
+<section class="slide" id="css-others">
+  <h2>Outras funcionalidades CSS 3</h2>
+
   <ul>
-    <li>CSS Selectors</li>
-    <li>Web Fonts</li>
-    <li>Colunas de texto</li>
-    <li>etc etc etc</li>
+    <li>Animations</li>
+    <li>Colunas</li>
+    <li>Borders</li>
+    <li>Gradientes</li>
+    <li>Rounded Corner</li>
   </ul>
 </section>
+
 
 <section class="slide separator1" id="apis-javascript">
   <span class="vcenter">
     <img style="width: 200px; " src="img/js.jpg" />
   </span>
 </section>
+
 
 <section class="slide" id="canvas-1">
   <h2>Canvas</h2>
@@ -320,6 +462,9 @@ tag <code>&lt;video&gt;</code></p>
 
   <p>Deixamos de precisar de flash para renderizar gráficos</p>
 
+  <p>Suporta todas as operações que precisamos normalmente para desenhar
+  gráficos. Gradientes, texto, imagens, etc</p>
+
   <p>Permite utilizar <strong>WebGL</strong> para renderizar gráficos 3D
   directamente a partir de <strong>JavaScript</strong>. Os gráficos renderizados
   podem utilizar o GPU da placa gráfica instalada no computador do
@@ -327,6 +472,8 @@ tag <code>&lt;video&gt;</code></p>
 
   <p>Um <code>&lt;canvas&gt;</code> é um rectângulo na página onde
   podemos utilizar JavaScript para desenharmos o que quisermos</p>
+  
+<p><img style="width: 300px;" src="img/draw.png"></p>
 </section>
 
 <section class="slide" id="canvas-2">
@@ -347,6 +494,13 @@ tag <code>&lt;video&gt;</code></p>
 <canvas id="canvas" width="838" height="220"></canvas>
 
 </section>
+
+<section class="slide" id="canvas-3">
+  <h2>Exemplos</h2>
+  <h3><a target="_new" href="http://studio.html5rocks.com/#Globe">http://studio.html5rocks.com/#Globe</a></h3>
+  <h3><a target="_new" href="http://dan.forys.co.uk/experiments/mesmerizer">http://dan.forys.co.uk/experiments/mesmerizer/</a></h3>
+</section>
+
 
 <section class="slide" id="location-1">
   <h2>API de Localização</h2>

@@ -73,7 +73,8 @@
       color: #e8da5e; }
     .deck-container .slide.separator1 h3 {
       font-family: "Open Sans", sans-serif;
-      font-size: 40px; }
+      font-size: 40px;
+      font-family: "Alfa Slab One", cursive; }
   .deck-container .slide.separator2 {
     background: #49708a;
     color: #d0e0eb; }

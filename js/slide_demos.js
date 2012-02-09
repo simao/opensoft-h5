@@ -129,3 +129,36 @@
     }
     document.getElementById("show-notif-btn").addEventListener('click', showNotification);
 })();
+
+
+(function () {
+    // Listen for the deviceorientation event and handle the raw data
+    window.addEventListener('deviceorientation', function(eventData) {
+	// gamma is the left-to-right tilt in degrees, where right is positive
+	var tiltLR = eventData.gamma;
+	
+	// beta is the front-to-back tilt in degrees, where front is positive
+	var tiltFB = eventData.beta;
+	
+	// alpha is the compass direction the device is facing in degrees
+	var dir = eventData.alpha
+	
+	// deviceorientation does not provide this data
+	var motUD = null;
+	
+	// call our orientation event handler
+	deviceOrientationHandler(tiltLR, tiltFB, dir, motUD);
+    }, false);
+ 
+ function deviceOrientationHandler(tiltLR, tiltFB, dir, motionUD) {
+     // Apply the transform to the image
+     document.getElementById("rotated_badge").style.webkitTransform = "rotate("+ tiltLR +"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
+     document.getElementById("rotated_badge").style.transform = "rotate("+ tiltLR +"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
+ }
+ 
+ 
+ // Some other fun rotations to try...
+ //var rotation = "rotate3d(0,1,0, "+ (tiltLR*-1)+"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
+ //var rotation = "rotate("+ tiltLR +"deg) rotate3d(0,1,0, "+ (tiltLR*-1)+"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
+ 
+})();

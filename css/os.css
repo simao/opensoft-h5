@@ -2,6 +2,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
 @import url(http://fonts.googleapis.com/css?family=Chivo:900);
 @import url(http://fonts.googleapis.com/css?family=Alfa+Slab+One);
+@font-face {
+  font-family: 'MegalopolisExtra';
+  src: url(MegalopolisExtra.otf); }
+
 .deck-container {
   font-family: "Helvetica Neue", sans-serif;
   font-size: 1.25em;
@@ -23,13 +27,18 @@
       color: #4b4452; }
     .deck-container .slide .re {
       color: #92b55f; }
+    .deck-container .slide .mi {
+      color: #487d76; }
+    .deck-container .slide .do {
+      color: #e8da5e; }
     .deck-container .slide .big-h {
-      font-size: 100px; }
-    .deck-container .slide .big-h2 {
       font-size: 70px;
+      font-family: "MegalopolisExtra"; }
+    .deck-container .slide .big-h2 {
+      font-size: 50px;
       color: #487d76; }
     .deck-container .slide .font-sans-1 {
-      font-family: 'Open Sans'; }
+      font-family: 'MegalopolisExtra'; }
     .deck-container .slide h1 {
       font-family: "Chivo", sans-serif; }
     .deck-container .slide h2 {
@@ -73,8 +82,7 @@
       color: #e8da5e; }
     .deck-container .slide.separator1 h3 {
       font-family: "Open Sans", sans-serif;
-      font-size: 40px;
-      font-family: "Alfa Slab One", cursive; }
+      font-size: 40px; }
   .deck-container .slide.separator2 {
     background: #49708a;
     color: #d0e0eb; }

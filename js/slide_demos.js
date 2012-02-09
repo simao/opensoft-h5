@@ -25,50 +25,50 @@
 })();
 
 (function() {
-            var map = null;
-            var geolog = document.querySelector('#geo-log');
-            var geoMap = document.querySelector('#geo-map');
+    var map = null;
+    var geolog = document.querySelector('#geo-log');
+    var geoMap = document.querySelector('#geo-map');
 
-            function showPosition(position) {
-              geolog.textContent = "Está a menos de " + position.coords.accuracy +
-                  " metros de: (" + position.coords.latitude + ", " +
-                  position.coords.longitude + ")";
-              var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-              var marker = new google.maps.Marker({
-                position: latLng,
-                map: map
-              });
-              map.setCenter(latLng);
-              map.setZoom(15);
+    function showPosition(position) {
+        geolog.textContent = "Está a menos de " + position.coords.accuracy +
+            " metros de: (" + position.coords.latitude + ", " +
+            position.coords.longitude + ")";
+        var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        var marker = new google.maps.Marker({
+            position: latLng,
+            map: map
+        });
+        map.setCenter(latLng);
+        map.setZoom(15);
 
-                console.log(map)
-            }
+        console.log(map)
+    }
 
-            function handlePositionError(evt) {
-              geolog.textContent = evt.message;
-            }
+    function handlePositionError(evt) {
+        geolog.textContent = evt.message;
+    }
 
-            function successPositionHandler(evt) {
-              // Load map if it doesn't already exist and when user clicks the button.
-              if (!map) {
-                map = new google.maps.Map(geoMap, {
-                  zoom: 3,
-                  center: new google.maps.LatLng(37.4419, -94.1419), // United States
-                  mapTypeId: google.maps.MapTypeId.ROADMAP
-                });
-                map.getDiv().style.border =  '1px solid #ccc';
-              }
+    function successPositionHandler(evt) {
+        // Load map if it doesn't already exist and when user clicks the button.
+        if (!map) {
+            map = new google.maps.Map(geoMap, {
+                zoom: 3,
+                center: new google.maps.LatLng(37.4419, -94.1419), // United States
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+            map.getDiv().style.border =  '1px solid #ccc';
+        }
 
-              if (navigator.geolocation) {
-                geolog.style.visibility = 'visible';
-                geolog.textContent = 'Looking for location...';
-                navigator.geolocation.getCurrentPosition(showPosition, handlePositionError);
-                // Also monitor position as it changes.
-                //navigator.geolocation.watchPosition(showPosition, handlePositionError);
-              } else {
-                geolog.textContent = 'Oops! Your browser does not support geolocation.';
-              }
-            }
+        if (navigator.geolocation) {
+            geolog.style.visibility = 'visible';
+            geolog.textContent = 'Looking for location...';
+            navigator.geolocation.getCurrentPosition(showPosition, handlePositionError);
+            // Also monitor position as it changes.
+            //navigator.geolocation.watchPosition(showPosition, handlePositionError);
+        } else {
+            geolog.textContent = 'Oops! Your browser does not support geolocation.';
+        }
+    }
 
     document.getElementById("see-position").addEventListener('click', successPositionHandler);
     geoMap.addEventListener('click', successPositionHandler, false);
@@ -143,22 +143,18 @@
 	// alpha is the compass direction the device is facing in degrees
 	var dir = eventData.alpha
 	
-	// deviceorientation does not provide this data
-	var motUD = null;
-	
 	// call our orientation event handler
-	deviceOrientationHandler(tiltLR, tiltFB, dir, motUD);
+	deviceOrientationHandler(tiltLR, tiltFB, dir, null);
     }, false);
- 
- function deviceOrientationHandler(tiltLR, tiltFB, dir, motionUD) {
-     // Apply the transform to the image
-     document.getElementById("rotated_badge").style.webkitTransform = "rotate("+ tiltLR +"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
-     document.getElementById("rotated_badge").style.transform = "rotate("+ tiltLR +"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
- }
- 
- 
- // Some other fun rotations to try...
- //var rotation = "rotate3d(0,1,0, "+ (tiltLR*-1)+"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
- //var rotation = "rotate("+ tiltLR +"deg) rotate3d(0,1,0, "+ (tiltLR*-1)+"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
- 
+    
+    function deviceOrientationHandler(tiltLR, tiltFB, dir, motionUD) {
+        // Apply the transform to the image
+        document.getElementById("rotated_badge").style.webkitTransform = "rotate("+ tiltLR +"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
+        document.getElementById("rotated_badge").style.transform = "rotate("+ tiltLR +"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
+    }
+    
+    // Some other fun rotations to try...
+    //var rotation = "rotate3d(0,1,0, "+ (tiltLR*-1)+"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
+    //var rotation = "rotate("+ tiltLR +"deg) rotate3d(0,1,0, "+ (tiltLR*-1)+"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
+    
 })();

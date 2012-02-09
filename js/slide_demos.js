@@ -158,3 +158,26 @@
     //var rotation = "rotate("+ tiltLR +"deg) rotate3d(0,1,0, "+ (tiltLR*-1)+"deg) rotate3d(1,0,0, "+ (tiltFB*-1)+"deg)";
     
 })();
+
+
+(function () {
+    var videoClip = document.getElementById('clip');
+    var playButton = document.getElementById('play-button');
+    var pauseButton = document.getElementById('pause-button');
+
+    function PlayVideo() {
+        videoClip.play();
+    }
+
+    function PauseVideo() {
+        videoClip.pause();
+    }
+
+    function MuteUnMute() {
+        videoClip.muted = videoClip.muted ? false : true;
+    }
+
+    playButton.addEventListener('click', PlayVideo);
+    pauseButton.addEventListener('click', PauseVideo);
+    document.getElementById('mute').addEventListener('click', MuteUnMute);
+})();
